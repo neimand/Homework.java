@@ -21,23 +21,29 @@ public class Homework {
      * что их сумма лежит в пределах от 10 до 20 (включительно), если да – вернуть true, в противном случае – false.
      */
     private static boolean isSumBetween10And20(int a, int b) {
-        // проверить, что сумма a и b лежит между 10 и 20
-        return false;
+        return (10 <= a + b) && (a + b <= 20);
     }
 
     private static boolean isPositive(int x) {
-        // проверить, что х положительное
-        return false;
+        return (x >= 0);
     }
 
     private static void printString(String source, int repeat) {
-        // напечатать строку source repeat раз
+        for (int i = 1; i <= repeat; i++){
+            System.out.println(source);
+        }
     }
 
     private static boolean isLeapYear(int year) {
-        // проверить, является ли год високосным. если да - return true
-        // год является високосным, если он делится на 4, но не делится на 100, но делится на 400
-        return false;
+        if (year % 400 == 0){
+            return true;
+        } 
+        else if (year % 100 == 0) {
+            return false;
+        } 
+        else {
+            return year % 4 == 0;
+        }
     }
 
     private static int[] createArray(int len, int initialValue) {
